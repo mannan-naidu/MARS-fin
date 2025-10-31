@@ -1,0 +1,66 @@
+{
+    "model_name": "ADANIENT_SingleOutput_Delta_SentimentCategories",
+    "tuning_params": {
+        "SEQUENCE_LENGTH": 30,
+        "LSTM_UNITS": 100,
+        "DROPOUT": 0.2,
+        "BATCH_SIZE": 32,
+        "EPOCHS": 50,
+        "TEST_SIZE": 0.2,
+        "USE_GRU": true
+    },
+    "model_architecture": "GRU",
+    "features_used": [
+        "Close",
+        "High",
+        "Low",
+        "Open",
+        "Volume",
+        "is_company_response",
+        "is_financial_negative",
+        "is_financial_positive",
+        "is_fraud_allegation",
+        "is_regulatory_probe",
+        "news_count",
+        "news_count_roll_sum_14d",
+        "news_count_roll_sum_3d",
+        "news_count_roll_sum_7d",
+        "sentiment_mean",
+        "sentiment_mean_roll_avg_14d",
+        "sentiment_mean_roll_avg_3d",
+        "sentiment_mean_roll_avg_7d",
+        "sentiment_weighted_mean",
+        "sentiment_weighted_mean_roll_avg_14d",
+        "sentiment_weighted_mean_roll_avg_3d",
+        "sentiment_weighted_mean_roll_avg_7d"
+    ],
+    "feature_count": 22,
+    "evaluation_losses_scaled": {
+        "test_loss_mse": 2.5044496059417725,
+        "test_metric_mae": 0.7724334001541138
+    },
+    "regression_metrics_unscaled_delta": {
+        "model_mae": 198.72014920611622,
+        "model_rmse": 407.133644445962,
+        "naive_baseline_mae": 191.54414443032786,
+        "naive_baseline_rmse": 413.4502258477698,
+        "improvement_over_naive_rmse_pct": 1.5277731167895265
+    },
+    "derived_classification_metrics": {
+        "accuracy": 0.5430327868852459,
+        "precision_up": 0.5271317829457365,
+        "recall_up": 0.8360655737704918,
+        "f1_score_up": 0.6465927099841522,
+        "confusion_matrix": [
+            [
+                61,
+                183
+            ],
+            [
+                40,
+                204
+            ]
+        ],
+        "classification_report": "               precision    recall  f1-score   support\n\nDown/Same (0)       0.60      0.25      0.35       244\n       Up (1)       0.53      0.84      0.65       244\n\n     accuracy                           0.54       488\n    macro avg       0.57      0.54      0.50       488\n weighted avg       0.57      0.54      0.50       488\n"
+    }
+}

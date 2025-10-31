@@ -1,0 +1,51 @@
+{
+    "model_name": "ADANIENT_SingleOutput_Delta_PureTechSentimentCategories",
+    "tuning_params": {
+        "SEQUENCE_LENGTH": 30,
+        "LSTM_UNITS": 100,
+        "DROPOUT": 0.2,
+        "BATCH_SIZE": 32,
+        "EPOCHS": 50,
+        "TEST_SIZE": 0.2,
+        "USE_GRU": true
+    },
+    "model_architecture": "GRU",
+    "features_used": [
+        "Close",
+        "High",
+        "Low",
+        "Open",
+        "TA_MACD_hist",
+        "TA_RSI_14",
+        "Volume",
+        "is_company_response",
+        "is_financial_negative",
+        "is_financial_positive",
+        "is_fraud_allegation",
+        "is_regulatory_probe",
+        "news_count",
+        "news_count_roll_sum_14d",
+        "news_count_roll_sum_3d",
+        "news_count_roll_sum_7d",
+        "sentiment_mean",
+        "sentiment_mean_roll_avg_14d",
+        "sentiment_mean_roll_avg_3d",
+        "sentiment_mean_roll_avg_7d",
+        "sentiment_weighted_mean",
+        "sentiment_weighted_mean_roll_avg_14d",
+        "sentiment_weighted_mean_roll_avg_3d",
+        "sentiment_weighted_mean_roll_avg_7d"
+    ],
+    "feature_count": 24,
+    "evaluation_losses_scaled": {
+        "test_loss_mse": 2.4444878101348877,
+        "test_metric_mae": 0.7487868070602417
+    },
+    "regression_metrics_unscaled_delta": {
+        "model_mae": 193.89328807890655,
+        "model_rmse": 404.8540989405423,
+        "naive_baseline_mae": 190.39259691060292,
+        "naive_baseline_rmse": 411.6177054929445,
+        "improvement_over_naive_rmse_pct": 1.6431767783900881
+    }
+}

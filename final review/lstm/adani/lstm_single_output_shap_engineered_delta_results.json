@@ -1,0 +1,29 @@
+{
+    "model_name": "ADANIENT_LSTM_SingleOutput_SHAP_Delta",
+    "features_used": [
+        "Close",
+        "High",
+        "Low",
+        "Net_Profit_Loss_For_the_Period",
+        "Net_Profit_Loss_For_the_Period_abs_change",
+        "Net_Profit_Loss_For_the_Period_days_since_change",
+        "Open",
+        "Policy_Repo_Rate",
+        "Policy_Repo_Rate_abs_change",
+        "Policy_Repo_Rate_days_since_change",
+        "Volume",
+        "news_count",
+        "sentiment_weighted_mean"
+    ],
+    "feature_count": 13,
+    "evaluation_losses_scaled": {
+        "test_loss_mse": 4.295254707336426,
+        "test_metric_mae": 0.9453449845314026
+    },
+    "regression_metrics_unscaled_delta": {
+        "model_mae": 79.14054083554934,
+        "model_rmse": 173.5014676443444,
+        "naive_baseline_mae": 76.57775810052911,
+        "naive_baseline_rmse": 172.17049957295015
+    }
+}

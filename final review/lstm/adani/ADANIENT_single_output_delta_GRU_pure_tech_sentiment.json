@@ -1,0 +1,46 @@
+{
+    "model_name": "ADANIENT_SingleOutput_Delta_PureTechSentiment",
+    "tuning_params": {
+        "SEQUENCE_LENGTH": 30,
+        "LSTM_UNITS": 100,
+        "DROPOUT": 0.2,
+        "BATCH_SIZE": 32,
+        "EPOCHS": 50,
+        "TEST_SIZE": 0.2,
+        "USE_GRU": true
+    },
+    "model_architecture": "GRU",
+    "features_used": [
+        "Close",
+        "High",
+        "Low",
+        "Open",
+        "TA_MACD_hist",
+        "TA_RSI_14",
+        "Volume",
+        "news_count",
+        "news_count_roll_sum_14d",
+        "news_count_roll_sum_3d",
+        "news_count_roll_sum_7d",
+        "sentiment_mean",
+        "sentiment_mean_roll_avg_14d",
+        "sentiment_mean_roll_avg_3d",
+        "sentiment_mean_roll_avg_7d",
+        "sentiment_weighted_mean",
+        "sentiment_weighted_mean_roll_avg_14d",
+        "sentiment_weighted_mean_roll_avg_3d",
+        "sentiment_weighted_mean_roll_avg_7d"
+    ],
+    "feature_count": 19,
+    "evaluation_losses_scaled": {
+        "test_loss_mse": 2.229532480239868,
+        "test_metric_mae": 0.790458619594574
+    },
+    "regression_metrics_unscaled_delta": {
+        "model_mae": 67.28390245859583,
+        "model_rmse": 127.09804835263164,
+        "naive_baseline_mae": 66.2146422568306,
+        "naive_baseline_rmse": 126.8680771032081,
+        "improvement_over_naive_rmse": -0.2299712494235422
+    }
+}

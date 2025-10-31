@@ -1,0 +1,60 @@
+{
+    "model_name": "['ADANIENT_master_data_engineered.csv']_LSTM_MultiOutput_Delta_EventsOnly",
+    "tuning_params": {
+        "SEQUENCE_LENGTH": 30,
+        "LSTM_UNITS": 128,
+        "DROPOUT": 0.2,
+        "BATCH_SIZE": 32,
+        "EPOCHS": 50,
+        "TEST_SIZE": 0.2,
+        "USE_GRU": true,
+        "LOSS_WEIGHT_PRICE": 1.0,
+        "LOSS_WEIGHT_DIR": 0.5
+    },
+    "model_architecture": "GRU",
+    "features_used": [
+        "Close",
+        "High",
+        "Low",
+        "Net_Profit_Loss_For_the_Period_abs_change",
+        "Net_Profit_Loss_For_the_Period_days_since_change",
+        "Open",
+        "Policy_Repo_Rate_abs_change",
+        "Policy_Repo_Rate_days_since_change",
+        "Volume",
+        "news_count",
+        "sentiment_weighted_mean"
+    ],
+    "feature_count": 11,
+    "evaluation_losses_scaled": {
+        "total_loss": 4.78439474105835,
+        "price_mse_loss": 4.384773254394531,
+        "direction_bce_loss": 0.721822202205658,
+        "price_mae_metric": 0.5026454925537109,
+        "direction_accuracy_metric": 1.0091171264648438
+    },
+    "regression_metrics_unscaled_delta": {
+        "model_mae": 84.47928913139738,
+        "model_rmse": 176.0830990105216,
+        "naive_baseline_mae": 76.57775810052911,
+        "naive_baseline_rmse": 172.17049957295015,
+        "improvement_over_naive_rmse": -3.9125994375714583
+    },
+    "classification_metrics_directional": {
+        "accuracy": 0.5026455026455027,
+        "precision_up": 0.5026455026455027,
+        "recall_up": 1.0,
+        "f1_score_up": 0.6690140845070423,
+        "confusion_matrix": [
+            [
+                0,
+                94
+            ],
+            [
+                0,
+                95
+            ]
+        ],
+        "classification_report": "               precision    recall  f1-score   support\n\nDown/Same (0)       0.00      0.00      0.00        94\n       Up (1)       0.50      1.00      0.67        95\n\n     accuracy                           0.50       189\n    macro avg       0.25      0.50      0.33       189\n weighted avg       0.25      0.50      0.34       189\n"
+    }
+}

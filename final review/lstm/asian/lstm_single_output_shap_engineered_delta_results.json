@@ -1,0 +1,38 @@
+{
+    "model_name": "ASIANPAINTS_LSTM_SingleOutput_SHAP_Delta",
+    "features_used": [
+        "10Y_Bond_Yield",
+        "10Y_Bond_Yield_abs_change",
+        "10Y_Bond_Yield_days_since_change",
+        "Close",
+        "Crude_Oil_Brent",
+        "Crude_Oil_Brent_abs_change",
+        "Crude_Oil_Brent_days_since_change",
+        "High",
+        "Low",
+        "Net_Profit_Loss_For_the_Period",
+        "Net_Profit_Loss_For_the_Period_abs_change",
+        "Net_Profit_Loss_For_the_Period_days_since_change",
+        "Open",
+        "Policy_Repo_Rate",
+        "Policy_Repo_Rate_abs_change",
+        "Policy_Repo_Rate_days_since_change",
+        "USD_INR_Exchange_Rate",
+        "USD_INR_Exchange_Rate_abs_change",
+        "USD_INR_Exchange_Rate_days_since_change",
+        "Volume",
+        "news_count",
+        "sentiment_weighted_mean"
+    ],
+    "feature_count": 22,
+    "evaluation_losses_scaled": {
+        "test_loss_mse": 1.6417237520217896,
+        "test_metric_mae": 0.8814822435379028
+    },
+    "regression_metrics_unscaled_delta": {
+        "model_mae": 189.6604845982479,
+        "model_rmse": 275.6851140276402,
+        "naive_baseline_mae": 217.23787567195765,
+        "naive_baseline_rmse": 291.41256817629056
+    }
+}

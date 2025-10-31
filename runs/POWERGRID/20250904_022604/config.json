@@ -1,0 +1,22 @@
+{
+  "data_dir": "Nifty50_CSVs",
+  "date_col": "Date",
+  "value_col": "Close",
+  "context_length": 64,
+  "prediction_horizon": 1,
+  "train_split": 0.9,
+  "batch_size": 64,
+  "num_epochs": 6,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "num_workers": 2,
+  "seed": 42,
+  "model_id": "time-series-foundation-models/lag-llama",
+  "runs_root": "runs",
+  "mixed_precision": true,
+  "shuffle_windows": true,
+  "max_windows_per_series": null,
+  "eval_every_steps": 200,
+  "save_every_epochs": 1,
+  "trust_remote_code": true
+}

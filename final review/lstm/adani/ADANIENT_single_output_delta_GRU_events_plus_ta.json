@@ -1,0 +1,38 @@
+{
+    "model_name": "ADANIENT_SingleOutput_Delta_Events_TA",
+    "tuning_params": {
+        "SEQUENCE_LENGTH": 30,
+        "LSTM_UNITS": 100,
+        "DROPOUT": 0.2,
+        "BATCH_SIZE": 32,
+        "EPOCHS": 50,
+        "TEST_SIZE": 0.2,
+        "USE_GRU": true
+    },
+    "model_architecture": "GRU",
+    "features_used": [
+        "Close",
+        "High",
+        "Low",
+        "Net_Profit_Loss_For_the_Period_abs_change",
+        "Net_Profit_Loss_For_the_Period_days_since_change",
+        "Open",
+        "Policy_Repo_Rate_abs_change",
+        "Policy_Repo_Rate_days_since_change",
+        "Volume",
+        "news_count",
+        "sentiment_weighted_mean"
+    ],
+    "feature_count": 11,
+    "evaluation_losses_scaled": {
+        "test_loss_mse": 4.396798133850098,
+        "test_metric_mae": 0.9944986701011658
+    },
+    "regression_metrics_unscaled_delta": {
+        "model_mae": 83.25549769131455,
+        "model_rmse": 175.54034972297126,
+        "naive_baseline_mae": 76.57775810052911,
+        "naive_baseline_rmse": 172.17049957295015,
+        "improvement_over_naive_rmse": -3.369850150021108
+    }
+}

@@ -1,0 +1,71 @@
+{
+    "model_name": "ASIANPAINTS_LSTM_MultiOutput_SHAP_Delta",
+    "tuning_params": {
+        "SEQUENCE_LENGTH": 50,
+        "LSTM_UNITS": 128,
+        "DROPOUT": 0.2,
+        "BATCH_SIZE": 32,
+        "EPOCHS": 50,
+        "TEST_SIZE": 0.2,
+        "USE_GRU": true,
+        "LOSS_WEIGHT_PRICE": 1.0,
+        "LOSS_WEIGHT_DIR": 0.5
+    },
+    "model_architecture": "GRU",
+    "features_used": [
+        "10Y_Bond_Yield",
+        "10Y_Bond_Yield_abs_change",
+        "10Y_Bond_Yield_days_since_change",
+        "Close",
+        "Crude_Oil_Brent",
+        "Crude_Oil_Brent_abs_change",
+        "Crude_Oil_Brent_days_since_change",
+        "High",
+        "Low",
+        "Net_Profit_Loss_For_the_Period",
+        "Net_Profit_Loss_For_the_Period_abs_change",
+        "Net_Profit_Loss_For_the_Period_days_since_change",
+        "Open",
+        "Policy_Repo_Rate",
+        "Policy_Repo_Rate_abs_change",
+        "Policy_Repo_Rate_days_since_change",
+        "USD_INR_Exchange_Rate",
+        "USD_INR_Exchange_Rate_abs_change",
+        "USD_INR_Exchange_Rate_days_since_change",
+        "Volume",
+        "news_count",
+        "sentiment_weighted_mean"
+    ],
+    "feature_count": 22,
+    "evaluation_losses_scaled": {
+        "total_loss": 1.9807325601577759,
+        "price_mse_loss": 1.6259340047836304,
+        "direction_bce_loss": 0.7384088635444641,
+        "price_mae_metric": 0.6648648381233215,
+        "direction_accuracy_metric": 0.9876098036766052
+    },
+    "regression_metrics_unscaled_delta": {
+        "model_mae": 212.49497472251375,
+        "model_rmse": 273.13756273353,
+        "naive_baseline_mae": 217.3493956216216,
+        "naive_baseline_rmse": 292.3600159438888,
+        "improvement_over_naive_rmse": 19.22245321035882
+    },
+    "classification_metrics_directional": {
+        "accuracy": 0.6648648648648648,
+        "precision_up": 0.638095238095238,
+        "recall_up": 0.7362637362637363,
+        "f1_score_up": 0.6836734693877551,
+        "confusion_matrix": [
+            [
+                56,
+                38
+            ],
+            [
+                24,
+                67
+            ]
+        ],
+        "classification_report": "               precision    recall  f1-score   support\n\nDown/Same (0)       0.70      0.60      0.64        94\n       Up (1)       0.64      0.74      0.68        91\n\n     accuracy                           0.66       185\n    macro avg       0.67      0.67      0.66       185\n weighted avg       0.67      0.66      0.66       185\n"
+    }
+}

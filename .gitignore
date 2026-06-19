@@ -1,0 +1,14 @@
+# Python environments
+venv/
+lagllama_env/
+new_env/
+**/venv/
+**/__pycache__/
+*.pyc
+*.pyo
+
+# Large zip files
+*.zip
+
+# Jupyter checkpoints
+.ipynb_checkpoints/

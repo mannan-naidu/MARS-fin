@@ -52,7 +52,7 @@ with tab2:
     )
 
     # --- Find All Experiment Files ---
-    stock_dir = Path(f"./{stock_name}/")
+    stock_dir = Path(__file__).parent / stock_name
     json_files = sorted(glob.glob(f"{stock_dir}/*.json"))
     experiment_names = [Path(f).stem for f in json_files]
 
